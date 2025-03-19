@@ -1,4 +1,29 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/* Plugin:
+Example of how to add plugin. tailwindconfig.js no longer exists in v4
+install plugin - e.g. daisyui use latest version with tailwind v4
+@plugin"daisyui";
+*/
+
+/* Prefix:
+Example of prefix - add custom prefix to all of tailwinds generated utility classes. In v4 also not set in js file. Configured directly in CSS file. 
+@import 'tailwindcss' prefix(tw); Prefixes in v4 do not have - but : when added to classes. E.g. <h1 className="tw:text-green-500"></h1>
+*/
+
+/* Theme:
+Example: All customization goes into globals.css/index.css file. 
+Add theme directive: 
+@theme {
+--breakpoint-*: initial; (add this to get the same result as using screens key in tailwind.config.js)
+--breakpoint-sm: 480px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 976px;
+
+--color-twitter-blue: #1DA1F2;
+--color-orange-500: #ffa500; (if you create a variable and the name is already taken then override value, if name is not taken create new theme variable)
+}
+ */
 
 :root {
   --background: #ffffff;
@@ -14,7 +39,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
